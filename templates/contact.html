@@ -1,0 +1,54 @@
+# ============================================
+# FILE: templates/contact.html
+# ============================================
+{% extends "base.html" %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card p-4">
+                <h2 class="text-center mb-4"><i class="fas fa-envelope-open-text text-primary"></i> Send a Message</h2>
+                <p class="text-center text-muted">I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.</p>
+                <form method="POST" action="{{ url_for('contact') }}">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Optional: additional contact info -->
+            <div class="row mt-4 text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-map-pin fa-2x text-primary"></i>
+                    <p class="mt-1">Remote / Berlin, DE</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-phone fa-2x text-primary"></i>
+                    <p class="mt-1">+49 123 456789</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-envelope fa-2x text-primary"></i>
+                    <p class="mt-1">jane@example.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
