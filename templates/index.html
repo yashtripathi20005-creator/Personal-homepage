@@ -1,0 +1,92 @@
+# ============================================
+# FILE: templates/index.html
+# ============================================
+{% extends "base.html" %}
+
+{% block title %}Home – My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Hero / Profile Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-4 text-center">
+            <!-- Replace with your own image URL or local static image -->
+            <img src="https://via.placeholder.com/180/0d6efd/ffffff?text=Your+Photo" alt="Profile Photo" class="profile-img">
+        </div>
+        <div class="col-md-8">
+            <h1 class="display-4 fw-bold">Hi, I'm Jane Doe</h1>
+            <p class="lead text-muted">Full-Stack Developer &amp; Creative Problem Solver</p>
+            <p class="mt-3">
+                I build clean, responsive, and user-focused web applications. 
+                With 5+ years of experience in Python, Flask, and modern JavaScript,
+                I turn ideas into reality.
+            </p>
+            <div class="social-links mt-3">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
+            </div>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg mt-3">
+                <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+        </div>
+    </div>
+
+    <!-- Portfolio Projects -->
+    <h2 class="text-center mb-4">Featured Projects</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-cloud-sun text-primary"></i> Weather App</h5>
+                    <p class="card-text">Real-time weather dashboard using OpenWeatherMap API. Built with Flask and Chart.js.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Source Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-tasks text-success"></i> Task Manager</h5>
+                    <p class="card-text">Full-featured task management system with user authentication and database persistence.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Source Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-blog text-warning"></i> Dev Blog</h5>
+                    <p class="card-text">Minimalist blog platform with Markdown support, tag system, and RSS feed.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills / Tech Stack -->
+    <h2 class="text-center mt-5 mb-4">Tech Stack</h2>
+    <div class="row text-center g-3">
+        <div class="col-6 col-md-3">
+            <i class="fab fa-python fa-3x text-primary"></i>
+            <p class="mt-1">Python</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="fab fa-flask fa-3x text-secondary"></i>
+            <p class="mt-1">Flask</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="fab fa-js fa-3x text-warning"></i>
+            <p class="mt-1">JavaScript</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="fab fa-bootstrap fa-3x text-purple" style="color: #7952b3;"></i>
+            <p class="mt-1">Bootstrap</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
