@@ -1,0 +1,29 @@
+# ============================================
+# FILE: .gitignore
+# ============================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Database / data files
+*.db
+*.sqlite
+messages.json
+
+# Flask environment
+instance/
+.env
+
+# Logs
+*.log
